@@ -1,0 +1,49 @@
+const pizzaToppings = ["Pepperoni", "Sausage", "Mushrooms", "Bacon"];
+
+function greetCustomer() {
+  console.log("Welcome to our pizza place! Here are the available toppings:");
+
+  for (let i = 0; i < pizzaToppings.length; i++) {
+    if (i === pizzaToppings.length - 5) {
+    } else {
+      console.log(`- ${pizzaToppings[i]},`);
+    }
+  }
+}
+greetCustomer();
+
+function getPizzaOrder(size, crust, ...toppings) {
+  console.log(
+    `One ${size} ${crust} crust pizza with ${pizzaToppings} coming up!`
+  );
+  return [size, crust, toppings];
+}
+
+const order = getPizzaOrder(
+  "large",
+  "thick",
+  "pepperoni",
+  "sausage",
+  "mushrooms",
+  "bacon"
+);
+console.log("Order Details:", order);
+
+function preparePizza(pizzaDetails) {
+  const [size, crust, pizzaToppings] = pizzaDetails;
+  const pizza = {
+    size: "large",
+    crust: "thick",
+    toppings: pizzaToppings
+  };
+}
+console.log("...Cooking pizza...");
+
+function servePizza(pizza) {
+  const { size, crust, pizzaToppings } = pizza;
+  console.log(
+    `Order up! Here's your ${size} ${crust} crust pizza with ${pizzaToppings}... Enjoy!`
+  );
+  return pizza;
+}
+servePizza();

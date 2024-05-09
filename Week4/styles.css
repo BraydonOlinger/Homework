@@ -1,0 +1,19 @@
+h1 {
+  margin:0;
+  background-color: white;
+}
+
+#main {
+  color: purple
+}
+
+#braydonHeadshot {
+border: 3px;
+padding-top: 3px;
+padding-bottom: 20px;
+}
+
+section div {
+  background-color: green;
+}
+

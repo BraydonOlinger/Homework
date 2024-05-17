@@ -230,3 +230,22 @@
     }
   }
 ];
+
+// for each iterates over each of the iterable arrays, but doesn't return anything.
+// map creates a new array based off the output.
+
+const phoneList = users.map(user => user.phone);
+const phoneList2 = users.map(function(user) {
+  return user.phone;
+});
+console.log(phoneList);
+console.log(phoneList2);
+
+const list = [];
+users.forEach(user => {
+  list.push({
+    website: user.website,
+    email: user.email
+  });
+});
+console.log(list);

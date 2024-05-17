@@ -1,4 +1,4 @@
-[
+const todoList = [
   {
     userId: 1,
     id: 1,
@@ -302,3 +302,11 @@
     completed: true
   }
 ];
+
+const user3Todos = todoList.filter(todo => todo.userId === 3);
+const u3Incompleted = user3Todos.filter(task => task.completed === false);
+
+const u3Incompleted2 = user3Todos.filter(task => !task.completed);
+const u3Incompleted3 = todoList.filter(
+  todo => todo.userId === 3 && !todo.complete
+);
